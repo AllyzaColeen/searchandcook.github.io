@@ -1,0 +1,537 @@
+/*--------- Google fonts inports ------------ */
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Playfair+Display:wght@700&display=swap');
+
+/*--------- GLOBAL styles ---------*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #FEF9E7;
+    font-family: 'Playfair Display', 'Open Sans', 'Great Vibes', 'Lora', cursive, sans-serif;
+}
+
+#main-container {
+    background: url("https://images.pexels.com/photos/616404/pexels-photo-616404.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.fa {
+    color: rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 10px;
+    width: 35px;
+}
+
+.logo {
+    width: 220px;
+}
+
+.btn {
+    font-size: 20px;
+    font-family: 'Lora';
+    margin: 0 20px;
+    width: 100px;
+    height: 35px;
+    outline: none;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.btn:hover {
+    border: 2px solid #e95525;
+    color: #e95525;
+    background-color: transparent;
+}
+
+h2 {
+    /* Editing this will affect Menu list, Sign-up form & About */
+    font-family: 'Great Vibes';
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #464545;
+}
+
+p {
+    font-size: 22px;
+    font-family: 'Lora';
+    font-weight: 550;
+    padding: 10px;
+    line-height: 1.5em;
+}
+
+li {
+    font-family: 'Lora';
+    font-weight: 500;
+    font-size: 1.5rem;
+    list-style: none;
+    text-align: center;
+    display: inline-block;
+    padding: 10px;
+}
+
+.link {
+    color: blue;
+    text-decoration: underline;
+}
+
+.footer {
+    font-family: 'Lora';
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+/*------------------------ SIGN-UP pop-out style starts here --------------*/
+
+#form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-out {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(-315deg, rgba(255, 146, 139, .7) 0%, rgb(255, 172, 129) 74%);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+}
+
+.pop-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #FEF9E7;
+    background-size: cover;
+    box-shadow: 10px 10px 20px grey;
+    border: 2px solid #fde3c2;
+    min-width: 30%;
+    min-height: 300px;
+    padding: 30px;
+}
+
+.signup-close:hover {
+    color: #ff6347;
+}
+
+.cancel-btn {
+    font-weight: 600;
+    border: #D75B05 solid 1px;
+    background-color: #D75B05;
+}
+
+.signup-btn {
+    font-weight: 600;
+    border: #74D705 solid 1px;
+    background-color: #74D705;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-sizing: inherit;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+input:focus {
+    border-bottom: #e95525 3px solid;
+}
+
+input::placeholder {
+    font-family: 'Lora';
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.input-line {
+    font-size: 20px;
+    display: flex;
+    background-color: rgba(233, 85, 37, 0.2);
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 92%;
+    height: auto;
+    margin: 10px;
+}
+
+
+/*------------ NAVBAR style starts here -------------*/
+
+#navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    padding: 0 50px;
+    width: 100%;
+    background-color: #FEF9E7;
+    z-index: 2;
+}
+
+#navbar a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 10px;
+    transition: 500ms;
+}
+
+#navbar a:hover {
+    text-decoration: underline;
+    font-size: 28px;
+}
+
+#navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-self: center;
+    justify-self: end;
+}
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    overflow-x: hidden;
+    /*disable the scrolling horizontally and to hide it inside the svg*/
+    padding-top: 50px;
+    transition: 500ms;
+    z-index: 2;
+}
+
+.side-nav a {
+    font-family: 'Lora';
+    padding: 10px;
+    text-align: left;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    transition: 500ms;
+}
+
+.side-nav a:hover {
+    color: #e95525cc;
+    transition: 300ms;
+}
+
+.side-nav .btn-close {
+    position: absolute;
+    top: 0px;
+    left: 140px;
+    font-size: 35px;
+    border-bottom: none;
+    z-index: 2;
+}
+
+
+/*-------- HOMEPAGE style starts here --------*/
+
+#home {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+    min-height: 100vh;
+    background-color: rgba(245, 245, 245, 0.2);
+}
+
+#home h1 {
+    padding: 140px 20px 20px 20px;
+    font-size: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 2.5s steps(18, end) forwards, blink 1s infinite;
+}
+
+#home h3 {
+    font-family: 'Lora';
+    font-weight: 600;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #464545;
+}
+
+.search-input {
+    background-color: #FFFFE0;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    width: 250px;
+    height: 40px;
+    border-radius: 10px;
+    outline: none;
+}
+
+.search-button {
+    background-color: #e95525cc;
+    color: #ffffff;
+    height: 40px;
+}
+
+
+/*------------ ABOUT page starts here -------------*/
+
+#about {
+    height: auto;
+    background-color: #FFFFE0;
+    margin: 20px;
+    padding: 50px;
+}
+
+#about img {
+    width: 430px;
+    filter: brightness(95%);
+    height: 500px;
+    position: relative;
+    margin: 20px 0;
+    animation-duration: 2s;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+.description {
+    text-align: justify;
+    text-indent: 25px;
+    position: relative;
+    height: auto;
+    width: 500px;
+    margin: 20px;
+    padding: 10px;
+    animation: down;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    background-color: #FFFFE0;
+    box-shadow: -4px 5px 10px;
+    /* To stay it where the animation ends*/
+}
+
+
+/*-------------- MENU and Recipes style starts here -------------*/
+
+#menu,
+.recipe-section {
+    height: auto;
+    font-family: 'Open Sans';
+    margin: 80px 20px;
+    padding: 20px 0;
+    background-color: #FFFFE0;
+}
+
+#menu img {
+    width: 280px;
+    height: 150px;
+}
+
+.cards,
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.cards li {
+    height: auto;
+    border: #ff6347 4px double;
+    background-color: #FFFFE0;
+    margin: 5px;
+    text-align: center;
+    transition: all 500ms ease-in-out;
+}
+
+.cards li:hover,
+.recipe button:hover {
+    opacity: 0.7;
+    transform: scale(0.98);
+}
+
+.recipe img {
+    width: 280px;
+    height: 200px;
+    border: #ff6347 1px solid;
+}
+
+.recipe {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 300px;
+    border: #ff6347 2px double;
+    margin: 10px;
+    text-align: center;
+}
+
+.recipe button {
+    border: none;
+    place-content: baseline;
+    border-radius: 25px;
+    background-color: #ff6347;
+    margin: 10px;
+    padding: 10px;
+    transition: all 500ms ease-in-out;
+}
+
+
+/* --------------------------- Menu and Recipes Ends Here --------------------------------*/
+
+
+/* KEYFRAMES starts here*/
+
+@keyframes typing {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes down {
+    0% {
+        top: -50px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+
+@keyframes side {
+    0% {
+        left: -1000px;
+    }
+    100% {
+        left: 10px;
+    }
+}
+
+@keyframes animate {
+    0% {
+        width: 0;
+    }
+}
+
+
+/* MEDIA QUERIES starts here */
+
+@media (min-width: 950px) {
+    .open-slide {
+        display: none;
+    }
+}
+
+@media(max-width: 950px) {
+    #home h1 {
+        font-size: 42px;
+        animation: none;
+    }
+    #navbar ul {
+        display: none;
+    }
+    #navbar {
+        justify-content: flex-start;
+        padding: 0;
+    }
+    #about img {
+        width: 330px;
+        height: 400px;
+        margin: 10px;
+    }
+}
+
+@media(max-width: 780px) {
+    #about,
+    #home,
+    .description {
+        border: none;
+        margin: 0;
+        padding: 10px;
+    }
+    .recipe-section {
+        padding-top: 50px;
+        margin: 10px;
+    }
+    #menu {
+        margin: 100px 10px 10px 10px;
+    }
+    #home h3 {
+        display: none;
+    }
+    p {
+        font-size: 1rem;
+        text-align: center;
+    }
+    #search form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .search-input,
+    .search-button {
+        width: 200px;
+        font-size: 12px;
+        margin: 5px;
+    }
+}
+
+@media(max-width: 500px) {
+    .button {
+        width: 70px;
+    }
+    #home h1 {
+        font-size: 32px;
+        animation: none;
+    }
+    #about {
+        background-color: transparent;
+    }
+    #about img {
+        display: none;
+    }
+}

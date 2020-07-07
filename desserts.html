@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Desserts </title>
+    <!--------- customized stylesheet -------------------->
+    <link rel="stylesheet" href="/css/style.css">
+    <!--------- ustomized JavaScript --------------------->
+    <script defer src="/js/main.js"></script>
+    <!---------- link for Animation On Scroll ------------>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!---------- link for Font-awesome and google fonts --------------------->
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!--------------------------- Body Starts Here ------------------------------------------>
+
+<body>
+
+    <!------------------- Navigation bar starts here ------------------>
+    <nav id="navbar">
+
+        <span class="open-slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <svg width="35" height="35">
+                        <path d="M0,10 35,10" stroke="#ff6347" stroke-width="5" />
+                        <path d="M0,20 35,20" stroke="#ff6347" stroke-width="5" />
+                        <path d="M0,30 35,30" stroke="#ff6347" stroke-width="5" />
+                    </svg>
+                </a>
+            </span>
+
+
+        <img src="/image/logo.png" alt="logo" class="logo">
+
+        <ul>
+            <div>
+                <li><a href="index.html"> Home </a></li>
+                <li><a href="#menu"> Menu </a></li>
+                <li><a href="#signup" onclick="popOut()"> Sign up </a>
+                </li>
+                <li><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></li>
+            </div>
+        </ul>
+    </nav>
+
+    <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()"><i class="fa fa-times"></i></a>
+        <a href="index.html"> Home </a>
+        <a href="#menu"> Menu </a>
+        <a href="#signup" onclick="popOut()"> Sign up </a>
+    </div>
+    <!------------------- Navigation bar ends here ---------------->
+
+    <!--------------- This sign up page will pop out ----------------->
+
+    <section class="pop-out" id="popSignUp">
+        <div class="pop-content">
+            <h2> Create Account </h2>
+
+
+            <form name="myForm" id="form">
+                <div class="input-line">
+                    <i class="fa fa-user"></i>
+                    <input type="text" name="username" autocomplete="off" placeholder="Username" required>
+                </div>
+
+                <div class="input-line">
+                    <i class="fa fa-paper-plane"></i>
+                    <input type="email" name="email" autocomplete="off" placeholder="Email Address" required>
+                </div>
+
+                <div class="input-line">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" id="password1" autocomplete="off" placeholder="Password" required>
+                </div>
+
+                <div class="input-line">
+                    <i class="fa fa-unlock-alt"></i>
+                    <input type="password" id="password2" autocomplete="off" placeholder="Confirm Password" required>
+                </div>
+                <p id="confirmPassword"></p>
+                <div class="center">
+                    <button class="btn signup-btn btn-outline-success" onclick="return validate()">Submit </button>
+                    <button class="btn cancel-btn" type="submit">
+                            <a href="#" class="signup-close" onclick="closeSignUp()">Cancel</a></button>
+                </div>
+            </form>
+            <div class="footer">
+                <h5> By clicking the Sign Up button, you agree to our </h5>
+                <h5><a href="#" class="link"> Terms and Conditions, </a> and <a href="#" class="link"> Privacy Policy </a></h5>
+            </div>
+        </div>
+    </section>
+    <!--------------- End of Sign Up ----------------->
+    <!----------------------------------- Menus starts here --------------------------->
+    <section class="recipe-section">
+
+        <h2> Dessert Recipe </h2>
+        <div class="recipe-container">
+            <ul class="recipe">
+                <li><img src="https://images.pexels.com/photos/302468/pexels-photo-302468.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                </li>
+                <li>
+                    <h3> Leche Flan </h3>
+                    <button> <a href="#"> See Full Details Here </a> </button>
+                </li>
+            </ul>
+            <ul class="recipe">
+                <li><img src="https://images.pexels.com/photos/1362534/pexels-photo-1362534.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                </li>
+                <li>
+                    <h3> Ice cream </h3>
+                    <button> <a href="#"> See Full Details Here </a> </button>
+                </li>
+            </ul>
+            <ul class="recipe">
+                <li><img src="https://images.pexels.com/photos/808941/pexels-photo-808941.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                </li>
+                <li>
+                    <h3> Macaroons </h3>
+                    <button> <a href="#"> See Full Details Here </a> </button>
+                </li>
+            </ul>
+            <ul class="recipe">
+                <li><img src="https://images.pexels.com/photos/230325/pexels-photo-230325.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                </li>
+                <li>
+                    <h3> Ice cream </h3>
+                    <button> <a href="#"> See Full Details Here </a> </button>
+                </li>
+            </ul>
+            <ul class="recipe">
+                <li><img src="https://images.pexels.com/photos/1179002/pexels-photo-1179002.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                </li>
+                <li>
+                    <h3> Muffins </h3>
+                    <button> <a href="#"> See Full Details Here </a> </button>
+                </li>
+            </ul>
+            <ul class="recipe">
+                <li><img src="https://images.pexels.com/photos/806363/pexels-photo-806363.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                </li>
+                <li>
+                    <h3> Ice cream </h3>
+                    <button> <a href="#"> See Full Details Here </a> </button>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!------------------------------------- Recipe ends here --------------------------------->
+
+
+    <!----------------------------------- Menus starts here --------------------------->
+    <section id="menu">
+
+        <h2> Menu </h2>
+        <div class="cards">
+            <li>
+                <a href="snacks.html">
+                    <img src="https://images.pexels.com/photos/1475/food-vegetables-italian-restaurant.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Snacks">
+                </a>
+                <p> Home-made Snacks</p>
+            </li>
+            <li>
+                <a href="pasta.html">
+                    <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="pasta">
+                </a>
+                <p> Pasta </p>
+            </li>
+            <li>
+                <a href="meat.html">
+                    <img src="https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Breakfast">
+                </a>
+                <p> Meat Recipe </p>
+            </li>
+            <li>
+                <a href="seafood.html">
+                    <img src="https://images.pexels.com/photos/921367/pexels-photo-921367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Lunch">
+                </a>
+                <p> Seafood Recipe</p>
+            </li>
+            <li>
+                <a href="salad.html">
+                    <img src="https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Dinner">
+                </a>
+                <p> Salads </p>
+            </li>
+        </div>
+    </section>
+    <!------------------------------------- Menus ends here --------------------------------->
+    <!------------------------------------- Footer starts here ------------------------------>
+    <footer class="footer">
+        <h4> Copyright &copy; 2020 by ColeenFabs </h4>
+        <ul>
+            <li> <a href="https://www.linkedin.com/in/allyza-coleen-fabellar-9403031a0/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+            <li> <a href="https://github.com/AllyzaColeen" target="_blank"><i class="fa fa-github-square"></i></a></li>
+            <li> <a href="https://codepen.io/Coleen" target="_blank"><i class="fa fa-codepen"></i></a></li>
+            <li> <a href="https://twitter.com/AllyzaCoding" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+        </ul>
+    </footer>
+    <!------------------------------------- Footer ends here ------------------------------>
+</body>
+<!--------------------------- Body Ends Here ------------------------------------------>
+
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Home </title>
+    <!--------- customized stylesheet -------------------->
+    <link rel="stylesheet" href="css/style.css">
+    <!--------- ustomized JavaScript --------------------->
+    <script defer src="js/main.js"></script>
+    <!---------- link for Animation On Scroll ------------>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!---------- link for google fonts --------------------->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap" rel="stylesheet">
+    <!----------- Link for font-awesome -------------------->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!--------------------------- Body Starts Here ------------------------------------------>
+
+<body>
+
+    <!-- Container starts here -->
+    <main id="main-container">
+
+        <!------------------- Navigation bar starts here ------------------>
+        <nav id="navbar">
+
+            <span class="open-slide">
+                <a href="#" onclick="openSlideMenu()">
+                    <svg width="35" height="35">
+                        <path d="M0,10 35,10" stroke="#ff6347" stroke-width="5" />
+                        <path d="M0,20 35,20" stroke="#ff6347" stroke-width="5" />
+                        <path d="M0,30 35,30" stroke="#ff6347" stroke-width="5" />
+                    </svg>
+                </a>
+                </a>
+            </span>
+
+
+            <img src="image/logo.png" alt="logo" class="logo">
+
+            <ul>
+                <div>
+                    <li><a href="#home"> Home </a></li>
+                    <li><a href="#about"> About </a></li>
+                    <li><a href="#menu"> Menu </a></li>
+                    <li><a href="#signup" onclick="popOut()"> Sign up </a>
+                    </li>
+                    <li><i class="fa fa-user-circle fa-2x" aria-hidden="true"></i></li>
+                </div>
+            </ul>
+        </nav>
+
+        <div id="side-menu" class="side-nav">
+            <a href="#" class="btn-close" onclick="closeSlideMenu()"><i class="fa fa-times"></i></a>
+            <a href="#home"> Home </a>
+            <a href="#about"> About </a>
+            <a href="#menu"> Menu </a>
+            <a href="#signup" onclick="popOut()"> Sign up </a>
+        </div>
+        <!------------------- Navigation bar ends here ---------------->
+
+        <!--------------- This sign up page will pop out ----------------->
+
+        <section class="pop-out" id="popSignUp">
+            <div class="pop-content">
+                <h2> Create Account </h2>
+
+
+                <form name="myForm" id="form">
+                    <div class="input-line">
+                        <i class="fa fa-user"></i>
+                        <input type="text" id="username" autocomplete="off" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-line">
+                        <i class="fa fa-paper-plane"></i>
+                        <input type="email" id="email" autocomplete="off" placeholder="Email Address" required>
+                    </div>
+
+                    <div class="input-line">
+                        <i class="fa fa-lock"></i>
+                        <input type="password" id="password1" autocomplete="off" placeholder="Password" required>
+                    </div>
+
+                    <div class="input-line">
+                        <i class="fa fa-unlock-alt"></i>
+                        <input type="password" id="password2" autocomplete="off" placeholder="Confirm Password" required>
+                    </div>
+                    <div>
+                        <button class="btn signup-btn btn-outline-success" onclick="return validate()">Submit </button>
+                        <button class="btn cancel-btn" type="submit">
+                            <a href="#" class="signup-close" onclick="closeSignUp()">Cancel</a></button>
+                    </div>
+                </form>
+                <div class="footer">
+                    <h4> By clicking the Sign Up button, you agree to our </h4>
+                    <h4><a href="#" class="link"> Terms and Conditions, </a> and <a href="#" class="link"> Privacy Policy </a></h4>
+                </div>
+            </div>
+        </section>
+        <!--------------- End of Sign Up ----------------->
+
+        <!------------------------- Homepage starts here ---------------------->
+        <section id="home">
+            <!--For Banner -->
+
+            <h1> Search & Cook Now! </h1>
+            <h3> Do you want to cook something but don't know how?</h3>
+            <h3>Let's make it!</h3>
+
+            <!--For Search -->
+            <li id="search">
+                <form action="#">
+                    <input type="text" placeholder="Search Here" class="search-input">
+                    <button class="btn search-button" type="submit"> Search </button>
+                </form>
+            </li>
+        </section>
+        <!---------------------------- Homepage ends here ----------------------->
+
+        <!------------------------------ About starts here ---------------------------->
+        <section id="about">
+
+            <div class="cards">
+                <img src="https://images.pexels.com/photos/277253/pexels-photo-277253.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="about" data-aos="fade-right">
+                <div class="description" data-aos="fade-up">
+                    <h2> About </h2>
+                    <p><span class="current"> Search </span> & <span class="current"> Cook </span> is an online food recipe website where you can search whatever recipe you want. Breakfast, Lunch, Desserts, Snack, Dinner or even party food ideas! Name it
+                        and we'll show it to you.So what are you waiting for? Try our recipes now by clicking the search button at the Homepage.</p>
+                    <p> Publish your own recipe and get the latest update by <a href="#signup" class="link" onclick="popOut()"> Signing Up Here! </a> </p>
+                </div>
+            </div>
+
+        </section>
+        <!--------------------------- About ends here ---------------------------->
+
+        <!----------------------------------- Menus starts here --------------------------->
+        <section id="menu">
+
+            <h2> Menu </h2>
+            <div class="cards">
+                <li>
+                    <a href="desserts.html">
+                        <img src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Desserts">
+                    </a>
+                    <p> Desserts </p>
+                </li>
+                <li>
+                    <a href="snacks.html">
+                        <img src="https://images.pexels.com/photos/1475/food-vegetables-italian-restaurant.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Snacks">
+                    </a>
+                    <p> Home-made Snacks</p>
+                </li>
+                <li>
+                    <a href="pasta.html">
+                        <img src="https://images.pexels.com/photos/1279330/pexels-photo-1279330.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="pasta">
+                    </a>
+                    <p> Pasta </p>
+                </li>
+                <li>
+                    <a href="meat.html">
+                        <img src="https://images.pexels.com/photos/361184/asparagus-steak-veal-steak-veal-361184.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Breakfast">
+                    </a>
+                    <p> Meat Recipe </p>
+                </li>
+                <li>
+                    <a href="seafood.html">
+                        <img src="https://images.pexels.com/photos/921367/pexels-photo-921367.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="Lunch">
+                    </a>
+                    <p> Seafood Recipe</p>
+                </li>
+                <li>
+                    <a href="salad.html">
+                        <img src="https://images.pexels.com/photos/257816/pexels-photo-257816.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Dinner">
+                    </a>
+                    <p> Salads </p>
+                </li>
+            </div>
+        </section>
+        <!------------------------------------- Menus ends here --------------------------------->
+        <!------------------------------------- Footer starts here ------------------------------>
+        <footer class="footer">
+            <h4> Copyright &copy; 2020 by ColeenFabs </h4>
+            <ul>
+                <li> <a href="https://www.linkedin.com/in/allyza-coleen-fabellar-9403031a0/" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                <li> <a href="https://github.com/AllyzaColeen" target="_blank"><i class="fa fa-github-square"></i></a></li>
+                <li> <a href="https://codepen.io/Coleen" target="_blank"><i class="fa fa-codepen"></i></a></li>
+                <li> <a href="https://twitter.com/AllyzaCoding" target="_blank"><i class="fa fa-twitter-square"></i></a></li>
+            </ul>
+        </footer>
+        <!------------------------------------- Footer ends here ------------------------------>
+    </main>
+
+    <!--------------------------------------- Container ends here ------------------------------------>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            delay: 20,
+            duration: 1000,
+
+        });
+    </script>
+</body>
+<!--------------------------- Body Ends Here ------------------------------------------>
+
+</html>
